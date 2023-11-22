@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM EDIT and REMOVE  </title>
+</head>
+<body>
+    <ul class="language"><li>
+        Javascript
+                         </li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}` // here we used innerhtml to store in 'li'
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('typescript')
+
+    function addoptLang(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName)) // here we used appendchild which is better then 'innerhtml'
+        document.querySelector('.language').appendChild(li)
+    }
+    addoptLang('pekka')
+
+    // edit element
+    const sendlang = document.querySelector('li:nth-child(3)')//selecting the element 'li'
+    const third = document.querySelector
+    ('li:nth-child(2)')
+
+    sendlang.innerHTML = 'mojo'//passing and assigning the value
+
+   
+    const newli = document.createElement('li')
+    newli.textContent= 'rojo'
+    third.replaceWith(newli)
+
+    //another edit
+    const char = document.querySelector('li:first-child')
+    char.outerHTML = '<li>witch</li>'
+
+    //remove
+    const last = document.querySelector('li:last-child')
+    last.remove() 
+
+</script>
+</html>
