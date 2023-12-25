@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    <button id="pink">pink</button>
+    </div>
+
+</body>
+<script>
+
+    // function outer (){
+    //     let userName = 'hitesh'
+    //     function inner (){
+    //         console.log('inner', userName);
+    //         return userName;
+            
+    //     }
+    //     function innertwo (){
+    //         console.log('innertwo',userName.userName);
+    //     }
+    //     inner()
+    //     innertwo()
+    // }
+    // outer() 
+    // console.log('too outer', outer.userName)
+
+        // a function can't access another functions variable which are defined inside of them.
+        // a function(1) can access the variables defined of a function(2) . if function(1) lies inside of function(2)
+        // inner function has access to scope of a outer function
+
+        // function makefunc (){
+        //     const name = 'Monzilla';
+        //     function displayName(){
+        //         console.log(name);
+        //     }
+        //     return displayName;
+        // }
+        // const myfunc = makefunc();
+        // myfunc();
+
+</script>
+
+
+<script>
+    // document.querySelector('#orange').addEventListener('click', function(){
+
+    //     document.body.style.backgroundColor = 'orange'
+    // })
+    // document.querySelector('#green').addEventListener('click', function(){
+
+    //     document.body.style.backgroundColor = 'green';
+    // })
+
+        function changeColor(color)
+        { 
+            function change () {
+            document.body.style.backgroundColor = `${color}`
+            
+        }     
+        return change
+       }
+
+        document.getElementById('orange').onclick = changeColor('orange')
+        document.getElementById('green').onclick = changeColor('green')
+        document.getElementById('pink').onclick = changeColor('pink')
+
+</script> 
+</html>

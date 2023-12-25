@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>cahi or kode</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+</body>
+<script>
+
+    const sayNikhil = function()
+    {
+        console.log('changing the H1');
+    }
+
+   const changingH1 =  function(){
+    document.querySelector('h1').innerHTML = 'h1 changed with innerHtml';
+   }
+
+    const peg = setTimeout(changingH1, 3000)//executes after a set time which is 2seconds here.
+
+   // const consolemsg =  setInterval(sayNikhil,2000)//executes repeatedly in a set interval of time which is 3 seconds here.
+
+
+     let gh = function()
+    {
+        
+        document.querySelector('#start').addEventListener('click',function()
+    {
+        setInterval(sayNikhil,1000)// to set interval
+    })
+    }
+
+    
+
+    document.querySelector('#start').addEventListener('click',start)
+
+    document.querySelector('#stop').addEventListener('click', stop())
+
+</script>
+</html>
